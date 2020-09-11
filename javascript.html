@@ -1,0 +1,48 @@
+<html>
+<head>
+ <title>Js Validation</title>
+ <script type="text/javascript">
+    function validateForm()
+     {
+         var number=document.getElementById("no").value;
+         if(no=="")
+      {
+          alert("Name field empty");
+	      number.focus();
+          return false;
+	  }
+      var sec_no=number;
+      console.log(sec_no);
+      var rem;
+      var sum=0;
+      while(number!=0){
+          rem=number%10;
+            sum=sum*10+rem;
+            number=parseInt(number/10);
+      }
+      console.log(sum);
+      if(sum==sec_no){
+          alert("its a  palindrome no");
+
+      }
+      else{
+          alert("not a palindrome no");
+      }
+
+     }
+         </script>
+ </head>
+ <body>
+    <table border="0" bgcolor="skyblue">
+        <form  name="UserReg" onSubmit="return validateForm()">
+        
+           <tr>
+               <td height="28" align="right">Enter the no:</td>
+               <td height="28"><input type="text"  id="no" size="25"   /></td>
+           </tr>
+           <tr>
+            <td height="35"></td>
+            <td height="35"><input type="submit" value="Sign Up" name="UserSigUp"  /></td>
+     
+        </tr>
+ </body>
